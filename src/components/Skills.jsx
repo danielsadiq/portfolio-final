@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion} from "framer-motion";
 import { FaJs, FaReact, FaNodeJs, FaPython, FaJava } from "react-icons/fa";
 import { RiSupabaseFill } from "react-icons/ri";
 import { BiLogoPostgresql } from "react-icons/bi";
@@ -60,7 +60,7 @@ export default function Skills() {
           {skills.map((skill) => (
             <motion.div
               key={skill.id}
-              className="bg-white border-2 hover:bg-black hover:text-white transition-all cursor-pointer border-black rounded p-3 h-36 w-36 lg:h-44 lg:w-44 flex flex-col items-center justify-center gap-5"
+              className="bg-white dark:bg-black border-2 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-all cursor-pointer border-black dark:border-white rounded p-3 h-36 w-36 lg:h-44 lg:w-44 flex flex-col items-center justify-center gap-5"
               initial={{ opacity: 0, y: 5 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: skill.id * 0.1 }}
@@ -75,9 +75,9 @@ export default function Skills() {
       </div>
 
       {/* Experience Section */}
-      <div className="bg-black w-full my-8 py-8 lg:my-16 lg:py-16">
+      <div className="bg-black dark:bg-white w-full my-8 py-8 lg:my-16 lg:py-16">
         <motion.h2
-          className="text-2xl lg:text-4xl text-center text-white"
+          className="text-2xl lg:text-4xl text-center text-white dark:text-black"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -89,9 +89,10 @@ export default function Skills() {
         {/* Experience Cards */}
         <div className="px-5 lg:px-28 my-8 lg:mt-16 space-y-10">
           {experiences.map((exp, index) => (
+            // className="bg-black dark:bg-white p-5 border border-[#D4D4D8] dark:border-[#27272A] rounded-md hover:bg-[#27272A] dark:hover:bg-[#F4F4F5] transition-all cursor-pointer"
             <motion.div
               key={exp.id}
-              className="bg-black p-5 border border-[#D4D4D8] rounded-md hover:bg-[#27272A] transition-all cursor-pointer"
+              className="bg-black dark:bg-white p-5 border border-[#D4D4D8] dark:border-[#27272A] rounded-md hover:bg-[#27272A] dark:hover:bg-[#F4F4F5] transition-all cursor-pointer"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{
@@ -105,15 +106,15 @@ export default function Skills() {
               <div className="flex justify-between flex-col items-start lg:flex-row lg:items-center">
                 <div className="flex items-center gap-5">
                   <img className="w-7" src={exp.logo} alt="" />
-                  <h2 className="font-semibold text-white text-lg lg:text-xl">
+                  <h2 className="font-semibold text-white dark:text-black text-lg lg:text-xl">
                     {exp.role} at {exp.company}
                   </h2>
                 </div>
-                <span className="text-[#D4D4D8] font-semibold text-sm mt-4 lg:mt-0 lg:text-base">
+                <span className="text-[#D4D4D8] dark:text-[#27272A] font-semibold text-sm mt-4 lg:mt-0 lg:text-base">
                   {exp.period}
                 </span>
               </div>
-              <p className="text-[#D4D4D8] mt-6 text-sm/6 lg:text-base font-light">
+              <p className="text-[#D4D4D8] dark:text-[#27272A] mt-6 text-sm/6 lg:text-base font-light">
                 {exp.description}
               </p>
             </motion.div>

@@ -1,8 +1,6 @@
 import { motion as Motion } from "framer-motion";
-import { IoLogoLinkedin, IoLogoTwitter } from "react-icons/io5";
-import { BiLogoGmail } from "react-icons/bi";
-import { BsGithub } from "react-icons/bs";
 import { TypeAnimation } from "react-type-animation";
+import Socials from "../components/Socials";
 
 export default function Home() {
   // Define dynamic hover colors based on the current theme
@@ -75,18 +73,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 1 }}
           >
-            {[BiLogoGmail, IoLogoLinkedin, IoLogoTwitter, BsGithub].map((Icon, index) => (
-              <Motion.a
-                key={index}
-                href="#"
-                className="bg-white dark:bg-black p-2 lg:p-3 rounded border-2 border-black dark:border-white text-black dark:text-white flex items-center justify-center"
-                whileHover={{ scale: 1.1}}
-                // whileHover={{ scale: 1.1, backgroundColor: hoverBg, color: hoverText}}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Icon className="w-4 h-4 lg:w-5 lg:h-5" />
-              </Motion.a>
-            ))}
+            <Socials/>
           </Motion.div>
         </Motion.div>
 
