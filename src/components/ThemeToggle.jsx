@@ -1,6 +1,6 @@
 import { HiSun, HiMoon } from 'react-icons/hi2'; // Using Heroicons set
 import { motion as Motion, AnimatePresence } from 'framer-motion';
-import { useTheme } from '../hooks/useTheme';
+import { useTheme } from "../hooks/ThemeContext";
 import { LuMoon, LuSun } from 'react-icons/lu';
 
 export default function ThemeToggle() {
