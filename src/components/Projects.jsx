@@ -11,10 +11,10 @@ const projects = [
   },
   {
     id: 2,
-    title: "Stock Market Dashboard",
-    description: "An interactive dashboard to monitor stock prices and market trends efficiently.",
-    image: "/assets/project1.png",
-    link: "#"
+    title: "Fast React Pizza",
+    description: "A full stack e-commerce website for ordering food.",
+    image: "/assets/project2.png",
+    link: "https://daniel-fast-pizza.netlify.app/"
   }
 ];
 

@@ -1,9 +1,8 @@
 import { motion as Motion } from "framer-motion";
-import { IoLogoLinkedin } from "react-icons/io5";
 import { BiLogoGmail } from "react-icons/bi";
 import { BsGithub } from "react-icons/bs";
 import { useTheme } from "../hooks/ThemeContext";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
 
 function Socials() {
   const { theme } = useTheme();
@@ -12,10 +11,10 @@ function Socials() {
   const hoverBg = theme === "light" ? "#000" : "#fff";
   const hoverText = theme === "light" ? "#fff" : "#000";
   const socials = [
-    { icon: BiLogoGmail, link: "mailto:danielsadiq93@gmail.com" },
-    { icon: IoLogoLinkedin, link: "https://www.linkedin.com/in/daniel-sadiq-590313227/" },
-    { icon: FaXTwitter, link: "https://x.com/_danielsadiq" },
-    { icon: BsGithub, link: "https://github.com/danielsadiq" },
+    { icon: BiLogoGmail, link: "mailto:danielsadiq93@gmail.com", label:"Gmail" },
+    { icon: FaLinkedinIn, link: "https://www.linkedin.com/in/daniel-sadiq-590313227/", label:"LinkedIn" },
+    { icon: FaXTwitter, link: "https://x.com/_danielsadiq", label:"X" },
+    { icon: BsGithub, link: "https://github.com/danielsadiq", label:"GitHub" },
   ];
   return (
     <>
@@ -23,6 +22,7 @@ function Socials() {
         <Motion.a
           key={index}
           href={social.link}
+          aria-label={social.label}
           target="_blank"
           rel="noopener noreferrer"
           animate={{
