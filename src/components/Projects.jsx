@@ -7,7 +7,7 @@ const projects = [
     title: "Crypto Screener Application",
     description: "A powerful tool for tracking and analyzing cryptocurrency trends in real-time.",
     image: "/assets/project1.png",
-    link: "#"
+    link: "https://daniel-fast-pizza.netlify.app/"
   },
   {
     id: 2,
