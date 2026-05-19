@@ -4,8 +4,8 @@ import { motion as Motion } from 'framer-motion';
 const projects = [
   {
     id: 1,
-    title: "Crypto Screener Application",
-    description: "A powerful tool for tracking and analyzing cryptocurrency trends in real-time.",
+    title: "Next Chat Application",
+    description: "A chat build with supabase, implementing realtime updates and buckets.",
     image: "/assets/project1.png",
     link: "https://daniel-fast-pizza.netlify.app/"
   },
